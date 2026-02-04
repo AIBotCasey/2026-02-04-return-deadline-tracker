@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Return Deadline Tracker</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Return Deadline Tracker</h1>
+    <p class="muted">Local-first. Data stays in your browser.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Add purchase</h2>
+      <form id="form">
+        <div class="grid">
+          <label>
+            Item
+            <input id="item" required placeholder="e.g. AirPods tips" />
+          </label>
+          <label>
+            Store
+            <input id="store" placeholder="e.g. Amazon" />
+          </label>
+          <label>
+            Purchase date
+            <input id="purchaseDate" type="date" required />
+          </label>
+          <label>
+            Return window (days)
+            <input id="windowDays" type="number" min="1" value="30" required />
+          </label>
+          <label>
+            Notes
+            <input id="notes" placeholder="optional" />
+          </label>
+        </div>
+        <div class="row">
+          <button type="submit">Add</button>
+          <button type="button" id="clearAll" class="danger">Clear all</button>
+          <span id="status" class="muted"></span>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="row between">
+        <h2>Deadlines</h2>
+        <div class="row">
+          <input id="filter" placeholder="Filter…" />
+          <button id="exportCsv" type="button">Export CSV</button>
+        </div>
+      </div>
+      <div id="list" class="list"></div>
+    </section>
+  </main>
+
+  <footer class="muted">
+    Tip: different stores have different windows (30/60/90). Log it once, stop thinking about it.
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
