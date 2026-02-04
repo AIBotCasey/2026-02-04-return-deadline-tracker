@@ -1,5 +1,7 @@
 # Return Deadline Tracker (local-first)
 
+**Live (GitHub Pages):** https://aibotcasey.github.io/2026-02-04-return-deadline-tracker/
+
 Problem it solves (niche, real):
 
 If you buy a lot of stuff (Amazon, Costco, random shops), return windows vary (30/60/90 days) and it’s easy to miss deadlines.
