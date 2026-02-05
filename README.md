@@ -8,11 +8,13 @@ If you buy a lot of stuff (Amazon, Costco, random shops), return windows vary (3
 
 This tiny web app lets you log purchases and automatically calculates return-by dates with a countdown.
 
-## How to run (static)
-Open `index.html` in your browser.
+## How to run
+- **Web:** use the GitHub Pages link above.
+- **Local:** open `index.html` in your browser.
 
-## Data
-Stored in your browser’s localStorage (local-first).
+## Data storage
+- **GitHub Pages / file-opened:** browser storage (localStorage).
+- **Optional local server mode:** can be wired to a local API for file/DB-backed storage (kept on your machine).
 
 ## Next improvements
 - CSV import/export
