@@ -11,7 +11,7 @@
     <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap">
       <div>
         <h1>Return Deadline Tracker</h1>
-        <p class="muted">Local-first. Data stays in your browser.</p>
+        <p class="muted">Track purchases + return-by dates. Local-first.</p>
       </div>
       <div style="display:flex;gap:10px;align-items:center">
         <a class="muted" href="https://aibotcasey.github.io/projects/return-deadline-tracker/" target="_blank" rel="noopener noreferrer">Blog</a>
@@ -21,7 +21,26 @@
 
   <main>
     <section class="panel">
-      <h2>Add purchase</h2>
+      <div class="row between">
+        <h2>Overview</h2>
+        <div class="row">
+          <span class="badge" id="summaryActive">Active: —</span>
+          <span class="badge" id="summaryDueSoon">Due ≤ 3d: —</span>
+          <span class="badge" id="summaryLate">Late: —</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="row between">
+        <h2>Add purchase</h2>
+        <div class="row">
+          <button type="button" id="preset30">30d</button>
+          <button type="button" id="preset60">60d</button>
+          <button type="button" id="preset90">90d</button>
+        </div>
+      </div>
+
       <form id="form">
         <div class="grid">
           <label>
@@ -30,7 +49,16 @@
           </label>
           <label>
             Store
-            <input id="store" placeholder="e.g. Amazon" />
+            <input id="store" placeholder="e.g. Amazon" list="storePresets" />
+            <datalist id="storePresets">
+              <option value="Amazon"></option>
+              <option value="Costco"></option>
+              <option value="Target"></option>
+              <option value="Best Buy"></option>
+              <option value="Walmart"></option>
+              <option value="REI"></option>
+              <option value="Apple"></option>
+            </datalist>
           </label>
           <label>
             Purchase date
@@ -58,15 +86,28 @@
         <h2>Deadlines</h2>
         <div class="row">
           <input id="filter" placeholder="Filter…" />
+          <select id="sort">
+            <option value="due-asc" selected>Sort: due soon</option>
+            <option value="due-desc">Sort: due latest</option>
+            <option value="purchase-desc">Sort: newest purchase</option>
+            <option value="purchase-asc">Sort: oldest purchase</option>
+            <option value="store">Sort: store</option>
+          </select>
+          <label class="muted" style="display:flex;gap:8px;align-items:center">
+            <input type="checkbox" id="showReturned" />
+            show returned
+          </label>
+          <button id="importCsv" type="button">Import CSV</button>
           <button id="exportCsv" type="button">Export CSV</button>
+          <input id="csvFile" type="file" accept="text/csv" style="display:none" />
         </div>
       </div>
       <div id="list" class="list"></div>
     </section>
   </main>
 
-  <footer class="muted">
-    Tip: different stores have different windows (30/60/90). Log it once, stop thinking about it.
+  <footer class="muted" style="padding:14px 16px">
+    Tip: mark items as returned instead of deleting, so you can keep a history.
   </footer>
 
   <script src="./app.js"></script>
