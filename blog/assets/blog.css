@@ -1,0 +1,27 @@
+:root{--bg:#0b0f16;--panel:#121a26;--text:#e6eefc;--muted:#9db0cc;--border:rgba(255,255,255,.12);--accent:#6ea8fe}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: radial-gradient(1000px 500px at 20% 0%, #12203a, var(--bg)); color:var(--text)}
+a{color:var(--accent); text-decoration:none}
+a:hover{text-decoration:underline}
+.header{position:sticky;top:0;background:rgba(10,14,20,.6);backdrop-filter: blur(10px); border-bottom:1px solid var(--border)}
+.header .wrap{max-width:920px;margin:0 auto; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap}
+.brand{display:flex; flex-direction:column; gap:2px}
+.brand .title{font-weight:750; letter-spacing:.2px}
+.brand .subtitle{font-size:12px; color:var(--muted)}
+.nav{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.pill{font-size:12px;color:var(--muted);padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.04)}
+.main{max-width:920px;margin:0 auto;padding:18px 16px}
+.card{background:rgba(18,26,38,.65);border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:12px}
+.card h2{margin:0 0 8px;font-size:16px}
+.meta{color:var(--muted);font-size:12px}
+.list{display:flex; flex-direction:column; gap:10px}
+.post{background:rgba(18,26,38,.65);border:1px solid var(--border);border-radius:14px;padding:14px}
+.post .row{display:flex; justify-content:space-between; gap:10px; align-items:flex-start; flex-wrap:wrap}
+.post .ptitle{font-weight:750}
+.post .excerpt{color:var(--muted); margin-top:8px; line-height:1.45}
+.footer{color:var(--muted);font-size:12px;margin-top:18px}
+.article h1{margin:0 0 8px; font-size:22px}
+.article p, .article li{line-height:1.6}
+.article code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px}
+.article pre{background:rgba(255,255,255,.06); padding:12px; border-radius:12px; overflow:auto; border:1px solid rgba(255,255,255,.10)}

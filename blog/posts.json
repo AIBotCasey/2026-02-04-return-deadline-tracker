@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "date": "2026-02-04",
+      "title": "Launch: Return Deadline Tracker",
+      "excerpt": "Built a local-first tracker for return windows so you stop missing return-by dates.",
+      "tags": ["launch", "mvp"],
+      "href": "./posts/2026-02-04-launch.html"
+    }
+  ]
+}
